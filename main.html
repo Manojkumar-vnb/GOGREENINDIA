@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>GoGreen India Exporter | Organic Products</title>
+</head>
+
+<body>
+  <!-- ======= INTRO VIDEO ======= -->
+  <div id="intro">
+    <video autoplay muted playsinline>
+      <source src="cover3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- ======= BACKGROUND VIDEO ======= -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="cover.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- ======= LOGO ======= -->
+  <div class="logo">
+    <img src="logo.png" alt="GoGreen India Exporter">
+  </div>
+
+  <!-- ======= NAVIGATION ======= -->
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#about product">AboutProduct</a>
+      <a href="#Gallery">Gallery</a>
+      <a href="#Contact">contact</a>
+    </nav>
+  </header>
+
+  <!-- ======= HORIZONTAL SCROLL SECTIONS ======= -->
+  <div class="scroll-container">
+    <!-- HOME -->
+    <section id="home">
+      <div class="content-slogan">
+        <p style="font-weight: bold; font-style: italic;">
+          தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்
+        <p style="font-weight: bold; font-style: italic;">
+          மெய்வருத்தக் கூலி தரும்
+        </p>
+        <p class="auth" style="font-weight: bold; font-style: italic;">
+                                   -   திருவள்ளுவர்
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about">
+      <div class="aboutus-text">
+        <h1>ABOUT US</h1>
+        <h2>Hydration with Heart</h2>
+        <p>
+          GoGreen India Exporter is committed to bringing organic, natural, and eco-friendly products to every household.
+          We work directly with farmers and sustainable producers to ensure purity, quality, and transparency.
+          Our mission is not just business — it’s building a greener future.
+        </p>
+        <p>
+          Every product we export carries our commitment to authenticity, environmental respect, and community empowerment.
+        </p>
+      </div>
+    </section>
+
+    <!-- WE STAND FOR 
+    <section id="standfor">
+      <h2>WE STAND FOR</h2>
+      <p>Our values are rooted in purity, sustainability, and honesty. Here’s what drives us forward.</p>
+      <div class="standfor-gallery">
+        <div class="standfor-card"><img src="shoe1.jpg" alt="Organic Farming" /></div>
+        <div class="standfor-card"><img src="shoe2.jpg" alt="Sustainability" /></div>
+        <div class="standfor-card"><img src="shoe3.jpg" alt="Healthy Living" /></div>
+      </div>
+    </section>  -->
+
+    <section id="aboutproduct">
+      <p>About product!! </p>
+    </section>  
+  </div>
+
+  <script>
+    // Hide intro after video ends or timeout
+    const intro = document.getElementById('intro');
+    const introVideo = intro.querySelector('video');
+
+    introVideo.onended = () => {
+      intro.style.display = 'none';
+    };
+
+    setTimeout(() => {
+      if (intro.style.display !== 'none') {
+        intro.style.display = 'none';
+      }
+    }, 10000);
+  </script>
+</body>
+
+</html>
