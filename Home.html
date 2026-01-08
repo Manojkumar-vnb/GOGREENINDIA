@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>To bring Organic products to all the people | GogreenIndia Exporter</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fullscreen intro overlay */
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 1600px;
+      height: 800px;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #intro video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill; /* 🔑 Stretches video to fill entire page */
+    }
+
+    /* Background video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    .video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Main content (hidden initially) */
+    .container {
+      position: relative;
+      z-index: 1;
+      padding-top: 20px;
+      padding-left: 320px;
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      display: none; /* show after intro ends */
+      flex-direction: column;
+      gap: 20px;
+      min-height: 400px;
+    }
+
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 260px;
+      z-index: 1000;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    header {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 40px;
+    }
+
+
+    nav {
+      padding: 20px;
+      font-family: sora-light, sans-serif;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 140px;
+      font-size: 15px; 
+      font-weight: normal; 
+      font-style: normal;
+    
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+      
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content-enquire {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-width: 200px;
+      padding-left: 80px;
+      gap: 300px;
+    }
+
+    .content-slogan {
+      background-color: rgba(211, 220, 219, 0.5);
+      color: black;
+      min-height: 100px;
+      width: fit-content;
+      display: inline-block;
+      margin-top: 300px;
+      margin-right: 100px;
+      margin-bottom: 100px;
+    }
+
+    .enquire {
+      width: 300px;
+      height: 300px;
+      background-color: rgba(211, 220, 219, 0.5);
+      border: 1px solid black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .enquire textarea {
+      width: 90%;
+      height: 30px;
+      resize: none;
+    }
+
+    .enquire select {
+      width: 92%;
+      height: 35px;
+    }
+
+    .enquire button {
+      width: 100px;
+      height: 40px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .auth
+    {
+      padding-left:210px ;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Intro Video -->
+  <div id="intro">
+    <video autoplay muted playsinline>
+      <source src="cover3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+  <!-- Background Video -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="cover.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="GoGreen India Exporter" />
+    </div>
+
+    <header>
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="AboutUs.html" target="_blank" rel="noopener noreferrer">About Us</a>
+        <a href="AboutProduct.html">About product</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="content-enquire">
+      <div class="content-slogan">
+        <p style="font-weight: bold; font-style: italic;">
+          தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்
+        <p style="font-weight: bold; font-style: italic;">
+          மெய்வருத்தக் கூலி தரும்
+          </p>
+          <p class="auth" style="font-weight: bold; font-style: italic;">
+                                   -   திருவள்ளுவர்
+          </p>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const intro = document.getElementById('intro');
+    const introVideo = intro.querySelector('video');
+    const container = document.querySelector('.container');
+
+    introVideo.onended = () => {
+      intro.style.display = 'none';
+      container.style.display = 'flex';
+    };
+
+    // Fallback in case video doesn’t end
+    setTimeout(() => {
+      if (intro.style.display !== 'none') {
+        intro.style.display = 'none';
+        container.style.display = 'flex';
+      }
+    }, 10000); // adjust to match tumble.mp4 duration
+  </script>
+
+</body>
+</html>
